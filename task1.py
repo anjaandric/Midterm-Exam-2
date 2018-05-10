@@ -27,9 +27,51 @@
 
 
 
-def main():
-    # Test your functions here
-    pass
+
+def encrypt(word):
+
+
+    broj_pomjeranja = input("Unesi broj: ")
+
+
+    enc_word = ""
+    zabranjene_rijeci = ["!", " ", ",", "."]
+    for character in word:
+        if character in zabranjene_rijeci:
+            enc_char = character
+        else:
+            enc_char = chr(ord(character)+ broj_pomjeranja)
+        enc_word += enc_char
+
+    return enc_word
+
+def decrypt(enc_word):
+
+
+
+    word = ""
+    zabranjene_rijeci = ["!", " ", ",", "."]
+
+
+    for enc_char in enc_word:
+        if enc_char in zabranjene_rijeci:
+            character = enc_char
+
+
+        else:
+            character = chr(ord(enc_char)- broj_pomjeranja)
+        word += character
+
+    return word
+
+
+
+
+
 
 if __name__ == "__main__":
-    main()
+    kriptovana_rijec = encrypt("Anja Andric 16!024")
+    print(kriptovana_rijec)
+
+    rijec = decrypt(kriptovana_rijec)
+    print(rijec)

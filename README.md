@@ -1,7 +1,7 @@
 # Midterm-Exam-2
 
-Name:
+Name:Anja
 
-Surname:
+Surname:Andric
 
-Index #:
+Index #:16/024

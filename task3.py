@@ -14,11 +14,16 @@
 
 # Write your function here
 
+def rec_sum(lista):
+    if len(lista)==0:
+        return 0
+    else:
+        return lista[0] + rec_sum(lista[1:])
 
 
-def main():
-    # Test your function here
-    pass
+
 
 if __name__ == "__main__":
-    main()
+    niz = [1,3,4,2,5]
+    print(rec_sum(niz))
+
